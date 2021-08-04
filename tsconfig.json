@@ -14,6 +14,7 @@
     "allowJs": true,
     "baseUrl": "./",
     "paths": {
+      "@pages/*": ["src/pages/*"],
       "@components/*": ["src/components/*"],
       "@routes/*": ["src/routes/"],
     },

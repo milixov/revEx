@@ -1,9 +1,9 @@
 import React from 'react';
 import renderer from 'react-test-renderer';
 
-import { Hello } from '@components/Hello/Hello';
+import { Home } from '@pages/Home/Home';
 
-describe('Hello component', () => {
+describe('Home component', () => {
   test('should render component properly', () => {
     // given
     const dummyComponentProps = {
@@ -12,7 +12,7 @@ describe('Hello component', () => {
     };
 
     // when
-    const componentRenderer = renderer.create(<Hello {...dummyComponentProps} />);
+    const componentRenderer = renderer.create(<Home {...dummyComponentProps} />);
     const tree = componentRenderer.toJSON();
 
     // then

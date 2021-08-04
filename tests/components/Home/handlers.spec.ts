@@ -1,6 +1,6 @@
-import { initialComponentProps, dummyFunc } from '@components/Hello/handlers';
+import { initialComponentProps, dummyFunc } from '@pages/Home/handlers';
 
-describe('Hello component handlers specs', () => {
+describe('Home component handlers specs', () => {
   describe('initialComponentProps', () => {
     test('should return object with default props for component', () => {
       // when

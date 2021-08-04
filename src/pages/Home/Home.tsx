@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-import style from './Hello.scss';
+import style from './Home.scss';
 
-interface IHelloProps {
+interface IHomeProps {
   foo: string;
   bar: string;
 }
 
-export const Hello = (props: IHelloProps): JSX.Element => (
+export const Home = (props: IHomeProps): JSX.Element => (
   <div className={style.sample}>
     Hello from {props.foo} and {props.bar}!
   </div>
