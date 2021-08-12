@@ -97,15 +97,12 @@ const SelectCurrency = (props: ISelectCurrency): JSX.Element => {
             <div className={`${style.list}`}>
               {listData &&
                 Object.keys(listData).map((item, index) => (
-                  <div key={`${id}_${item}`} onClick={() => handleCloseModal(item)}>
-                    <div className={style.item}>
-                      <section>
-                        <div className="uk-text-default uk-text-bold">{item}</div>
-                        <span className="uk-text-muted">{listData[item]}</span>
-                      </section>
-                      {item === value && <div className={style.dot} />}
-                    </div>
-                    {index + 1 < Object.keys(listData)?.length && <hr />}
+                  <div key={`${id}_${item}`} onClick={() => handleCloseModal(item)} className={style.item}>
+                    <section>
+                      <div className="uk-text-default uk-text-bold">{item}</div>
+                      <span className="uk-text-muted">{listData[item]}</span>
+                    </section>
+                    {item === value && <div className={style.dot} />}
                   </div>
                 ))}
             </div>
