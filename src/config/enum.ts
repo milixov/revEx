@@ -1,0 +1,5 @@
+const REFETCH_INTERVAL = {
+  DEFAULT: 100000,
+};
+
+export { REFETCH_INTERVAL };

@@ -1,0 +1,100 @@
+@import '@style/variables.scss';
+
+.selectCurrency {
+    display: grid;
+    grid-template-columns: 1fr 1px 100px;
+    align-items: center;
+    gap: $dimen;
+  
+    overflow: hidden;
+    padding: 0 $dimen;
+    
+    border-radius: $dimen;
+    border: 1px solid $color-gray;
+    background-color: $color-white;
+}
+
+.input {
+    text-align: start;
+    border: none;
+}
+
+.divider {
+    width: 1px;
+    height: 80%;
+    background-color: $color-gray;
+}
+
+.button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 0 $dimen;
+    border: none;
+
+    font-weight: bold;
+}
+
+.modal {
+    border-radius: $dimen-lg;
+    overflow: hidden;
+}
+
+.header {
+    background-color: $color-gray;
+    padding-top: $dimen-xg;
+
+    input { 
+        border-radius: $dimen;
+    }
+}
+
+.body {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    height: calc(100vh - 350px);
+
+    li:hover {
+        background-color: $color-background;
+    }
+
+    hr {
+        margin: $dimen 0;
+    }
+}
+
+.item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    section {
+        width: 100%;
+    }
+}
+
+.dot {
+    height: $dimen;
+    width: $dimen;
+    border-radius: $dimen-sm;
+    background-color: $color-background-secondary;
+}
+
+.list:first-child {
+    padding-top: $dimen-xg;
+}
+
+.list:last-child {
+    padding-bottom: $dimen-xg;
+}
+

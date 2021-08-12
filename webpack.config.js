@@ -3,6 +3,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const Dotenv = require('dotenv-webpack');
 
 const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -11,10 +12,14 @@ module.exports = {
     main: './src/index.tsx',
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js', '.scss'],
+    extensions: ['.ts', '.tsx', '.js', '.scss', '.env'],
     alias: {
-      '@components': path.resolve(__dirname, 'src/components'),
+      '@style': path.resolve(__dirname, 'src/style'),
+      '@hooks': path.resolve(__dirname, 'src/hooks'),
+      '@utils': path.resolve(__dirname, 'src/utils'),
+      '@config': path.resolve(__dirname, 'src/config'),
       '@pages': path.resolve(__dirname, 'src/pages'),
+      '@components': path.resolve(__dirname, 'src/components'),
       '@routes': path.resolve(__dirname, 'src/routes'),
     },
   },
@@ -71,5 +76,6 @@ module.exports = {
       filename: isDevelopment ? '[name].css' : '[name].[hash].css',
       chunkFilename: isDevelopment ? '[id].css' : '[id].[hash].css',
     }),
+    new Dotenv(),
   ],
 };

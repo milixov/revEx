@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "moduleResolution": "node",
+    "resolveJsonModule": true,
     "esModuleInterop": true,
     "outDir": "./dist/",
     "noImplicitAny": true,
@@ -14,9 +15,13 @@
     "allowJs": true,
     "baseUrl": "./",
     "paths": {
+      "@hooks/*": ["src/hooks/*"],
+      "@utils/*": ["src/utils/*"],
+      "@config/*": ["src/config/*"],
       "@pages/*": ["src/pages/*"],
       "@components/*": ["src/components/*"],
       "@routes/*": ["src/routes/"],
+      "@style/*": ["src/style/"],
     },
   },
   "exclude": [
